@@ -18,6 +18,7 @@ class BaseRepository implements BaseRepositoryInterface
     }
     public function create($data)
     {
+        //dd($this->model->create($data));
         return $this->model->create($data);
     }
 

@@ -20,5 +20,12 @@ function errorResponse($msg = "The transaction is not successfully", $e = [])
         'errors' => !empty($e) ? $e->getMessage() : ''
     ];
     return $response;
+
+    /*
+        'message' => $e->getMessage(),
+        'exception' => get_class($e),
+        'file' => $e->getFile(),
+        'line' => $e->getLine(),
+    */
 }
 

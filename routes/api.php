@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Employee\EmployeeController;
+use App\Http\Controllers\TestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -20,4 +21,11 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::get('/employee-list', [EmployeeController::class, 'list']);
     //Route::get('/employee-add', [EmployeeController::class, 'add']);
     Route::post('/employee-add', [EmployeeController::class, 'create']);
+
+
 });
+
+
+//Use for testing
+Route::get('/test-orm', [TestController::class, 'testOrm']);
+
